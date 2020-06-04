@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+main {
+    padding: 15px;
+}
+
+nav {
+    position: sticky;
+    top: 0px;
+    height: 100px;
+    background-color: grey;
+    width: 100%;
+    padding: 20px
+}
+
+nav a {
+    float: left;
+    height: auto;
+    width: auto;
+    padding: 11.2px;
+    margin: 20px;
+    background-color: lightgray;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.login-form {
+    text-align: center;
+    padding: 15px;
+    background-color: grey;
+    width: 25%;
+    height: auto;
+    margin: auto;
+}
+
+.channelDiv {
+    width: 20%;
+}
+
+.timestamp {
+    float: right;
+}
+
+li {
+    list-style: none;
+}
+
+.userNameInput,
+.userPasswordInput {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.btnContainer {
+    width: 100%;
+}
+
+
+/* Man kan bara ha ett id per element och det måste vara unikt #id.
+Man kan ha flera klasser på ett element. .klassnamn */
