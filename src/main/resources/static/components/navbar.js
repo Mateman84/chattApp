@@ -1,10 +1,18 @@
 export default {
     template: `
         <nav>
-            <div class="navbarContainer">
+            <div class="navMenu">
                 <router-link class="nav-item" to="/">Home</router-link>      
-                <router-link class="nav-item" to="/channels">Channels</router-link>    
-                <span class="nav-item" @click="logout">Logout</span>
+                <router-link class="nav-item" to="/channels">Channels</router-link>        
+            </div>
+            <div class="infoDiv">
+                <div class="text-block">
+                <p>Username</p>    
+                </div>
+                <div class="text-block">
+                <p>ChannelName</p>    
+                </div>                
+                <div class="nav-item" @click="logout">Logout</div>
             </div>
         </nav> 
     `,

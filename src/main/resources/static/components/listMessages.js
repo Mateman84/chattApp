@@ -1,6 +1,6 @@
 export default {
     template: `
-        <div>
+        <div class="messageDiv">
             <h2>Messages</h2>
             <ul>
             <li v-for="msg of messages":key="msg.id">

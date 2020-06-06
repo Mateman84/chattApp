@@ -4,9 +4,9 @@ export default {
     template: `
     <div id="app">
     <navbar v-if="user"/>
-      <main>
+      <!-- <main> -->
         <router-view />
-      </main>
+      <!-- </main> -->
     </div>
   `,
     components: {
