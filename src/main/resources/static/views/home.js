@@ -7,14 +7,16 @@ import addChannel from "../components/addChannel.js"
 
 export default {
     template: `
-        <body>    
-            <h2>Home</h2>
+        <body>
+            <main>
+                <h2>Home</h2>
                 <!--<getMessagesBtn/>
                 <getChannels/>-->
                 <listChannels/>
                 <addChannel/>
                 <listMessages/>
                 <chatMsgInputField v-if="channel"/>
+            </main>
         </body> 
     `,
     components: {
