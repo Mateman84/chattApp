@@ -9,13 +9,19 @@ export default {
     template: `
         <body>
             <main>
-                <h2>Home</h2>
                 <!--<getMessagesBtn/>
                 <getChannels/>-->
-                <listChannels/>
-                <addChannel/>
-                <listMessages/>
-                <chatMsgInputField v-if="channel"/>
+                <section class="channelSection">
+                <h2>Channels</h2>
+                    <listChannels/>
+                    <addChannel/>
+                </section>
+                <section class="messageSection">
+                    <listMessages/>
+                    <div class="messageInputDiv">
+                        <chatMsgInputField v-if="channel"/>                    
+                    </div>
+                </section>
             </main>
         </body> 
     `,

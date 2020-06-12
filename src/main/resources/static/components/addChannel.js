@@ -37,7 +37,7 @@ export default {
             console.log(channel)
             result = await result.json()
 
-            this.$store.commit('appendChannel', result)
+            //this.$store.commit('appendChannel', result)
 
 
             this.channelName = ''

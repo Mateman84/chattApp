@@ -3,12 +3,23 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     margin: 0px;
-    line-height: 20px;
 }
 
 main {
-    padding: 15px;
+    display: flex;
+    padding: 20px;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+}
+
+hr {
+    border: 1px solid rgb(192, 192, 192);
 }
 
 nav {
@@ -89,21 +100,83 @@ nav {
     margin: auto;
 }
 
-.channelDiv {
-    width: 20%;
-    background-color: blue;
+.channelSection {
+    border-radius: 10px;
+    border: 2px solid black;
+    margin-right: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    min-width: 25%;
+    background-color: grey;
 }
+
+.channelDiv {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+}
+
+.messageSection {
+    border-radius: 10px;
+    border: 2px solid black;
+    margin-right: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+    background-color: grey;
+}
+
+.messageDiv {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+}
+
+
+/* .messageInputDiv {
+    display: flex;
+    flex-direction: row;
+    align-self: auto;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+} */
+
+.messageForm {
+    display: flex;
+    align-self: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+}
+
+.msgInputField {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+    text-align: end;
+}
+
+
+/* .formContainer {
+    display: flex;
+    align-self: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+} */
 
 .timestamp {
     float: right;
 }
 
-.messageDiv {
-    background-color: blueviolet;
-}
-
 li {
-    list-style: none;
+    list-style: square;
 }
 
 .userNameInput,

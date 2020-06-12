@@ -1,9 +1,9 @@
 export default {
     template: `
-     <form @submit.prevent="sendMsg"> 
-         <input :disabled="!this.user" v-model="msgText" type="text" name="Enter Message" placeholder="Enter message here...">
-         <button :disabled="!this.user">Send</button>
-     </form>
+    <form class="messageForm" @submit.prevent="sendMsg"> 
+        <input class="msgInputField" :disabled="!this.user" v-model="msgText" type="text" name="Enter Message" placeholder="Enter message here...">
+        <button :disabled="!this.user">Send</button>
+    </form>
     `,
     computed: {
         user() {
