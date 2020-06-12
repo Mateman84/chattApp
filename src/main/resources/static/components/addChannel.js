@@ -1,16 +1,13 @@
 export default {
     template: `
      <form @submit.prevent="addChannel"> 
-         <input :disabled="!this.user" v-model="channelName" type="text" name="Enter Name" placeholder="Enter Channel Name...">
+         <input :disabled="!this.user" v-model="channelName" type="text" channelName="Enter Name" placeholder="Enter Channel Name...">
          <button :disabled="!this.user">Add Channel</button>
      </form>
     `,
     computed: {
         user() {
             return this.$store.state.user
-        },
-        channels() {
-            return this.$store.state.channels
         }
     },
     data() {
@@ -22,7 +19,7 @@ export default {
         //Löste mitt problem 
         async addChannel() {
             let channel = {
-                name: this.channelName
+                channelName: this.channelName
             }
             let result = await fetch('/rest/channels/' + this.channelName, { //Var
                 /* C - POST

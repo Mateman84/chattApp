@@ -1,16 +1,12 @@
-import getMessagesBtn from "../components/getMessagesBtn.js"
 import listMessages from "../components/listMessages.js"
 import chatMsgInputField from "../components/chatMsgInputField.js "
 import listChannels from "../components/listChannels.js"
-import getChannels from "../components/getChannels.js"
 import addChannel from "../components/addChannel.js"
 
 export default {
     template: `
         <body>
             <main>
-                <!--<getMessagesBtn/>
-                <getChannels/>-->
                 <section class="channelSection">
                 <h2>Channels</h2>
                     <listChannels/>
@@ -26,8 +22,6 @@ export default {
         </body> 
     `,
     components: {
-        getMessagesBtn,
-        getChannels,
         listChannels,
         chatMsgInputField,
         listMessages,
@@ -35,7 +29,7 @@ export default {
     },
     computed: {
         channel() {
-            return this.$store.state.currentChannel
+            return this.$store.state.channels
         }
     }
 
