@@ -28,7 +28,6 @@ public class MessageService {
         Message dbMessage = null;
         try {
             dbMessage = messageRepo.save(message);
-
             socketService.sendToAll(dbMessage, Message.class);
         } catch (Exception e){
             e.printStackTrace();

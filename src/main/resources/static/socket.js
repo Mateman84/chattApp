@@ -6,6 +6,7 @@ connect();
 
 function connect() {
     // change PORT to your backends PORT
+    //Socket adressen måste vara densamma som i websocketconfig.java
     ws = new WebSocket('ws://localhost:4000/my-secret-socket');
     ws.onmessage = (e) => {
         showSomething(e.data);
@@ -16,9 +17,12 @@ function connect() {
         } catch (error) {
 
         }
-
-        if (data && data.text) {
-            store.commit("appendMsg", data);
+        if (data && data.sender) {
+            console.log("You sent a message")
+            store.commit("appendMsg", data)
+        } else if (data && data.name) {
+            console.log("You sent a channel")
+            store.commit("appendChannel", data)
         }
     }
     ws.onopen = (e) => {

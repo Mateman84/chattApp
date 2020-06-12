@@ -1,7 +1,6 @@
 export default {
     template: `
         <div class="channelDiv">
-            <h2>Channels</h2>
             <ul>
             <li v-for="(channel, index) in channels":key="channel.id">
             <strong @click="joinChannel(index)">{{channel.channelName}}</strong>
@@ -10,11 +9,6 @@ export default {
             </ul>
         </div>
     `,
-    data() {
-        return {
-            id: null
-        }
-    },
     computed: {
         channels() {
             return this.$store.state.channels
