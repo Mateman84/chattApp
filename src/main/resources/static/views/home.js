@@ -15,7 +15,7 @@ export default {
                 <section class="messageSection">
                     <listMessages/>
                     <div class="messageInputDiv">
-                        <chatMsgInputField v-if="channel"/>                    
+                        <chatMsgInputField v-if="channels"/>                    
                     </div>
                 </section>
             </main>
@@ -28,7 +28,7 @@ export default {
         addChannel
     },
     computed: {
-        channel() {
+        channels() {
             return this.$store.state.channels
         }
     }

@@ -40,15 +40,15 @@ public class ChannelService {
         return channel;
     }
 
-    public Channel addChannel (String channelName){
-        Channel channel = new Channel(channelName);
+    public Channel addChannel (String name){
+        Channel dbChannel = new Channel(name);
         try {
-            channelRepo.save(channel);
-            socketService.sendToAll(channel, Channel.class);
+            socketService.sendToAll(dbChannel, Channel.class);
+            return channelRepo.save(dbChannel);
         } catch (Exception e){
             e.printStackTrace();
         }
-        return channel;
+        return dbChannel;
     }
 }
 
