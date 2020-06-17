@@ -35,12 +35,5 @@ export default {
 
             this.$store.commit("setChannels", response)
         }
-        /* async fetchMessages() {
-            let response = await fetch("/rest/messages"); //En fetch utan ett objekt med enbart en sträng går ALLTID till en getmapping
-
-            response = await response.json();
-
-            this.$store.commit("setMessages", response)
-        } */
     }
 }
